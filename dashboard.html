@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+  <style>
+    .header {
+      background-color: #008000; /* Verde */
+    }
+    .footer {
+      background-color: #0000FF; /* Azul */
+      color: white;
+      padding: 10px 0;
+    }
+    .sidebar {
+      background-color: #f8f9fa; /* Cor de fundo da sidebar */
+      height: 100vh;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <nav class="navbar navbar-expand-lg header">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="logo.png" alt="Logo" style="width: 120px; height: 120px;">
+        <span class="text-white">Dashboard</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"><i class="fas fa-bars text-white"></i></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Pedidos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Clientes</a>
+          </li>
+          <li class="nav-item">
+            <form class="form-inline">
+              <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+              <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Pesquisar</button>
+            </form>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid mt-5">
+    <div class="row">
+      <!-- Sidebar -->
+      <div class="col-md-3 sidebar">
+        <h4>Menu</h4>
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" href="dashboard.html">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="cadastro-cliente.html">Cadastrar Cliente</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./cadastroPedido.html">Cadastrar Pedido</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="entrega.html">Entregas</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Main Content -->
+      <div class="col-md-9">
+        <h1>Pedidos em Andamento</h1>
+        <div class="card mt-3">
+          <div class="card-body">
+            <table class="table table-striped" id="tabela-pedidos">
+              <thead class="thead-dark">
+                <tr>
+                  <th>ID Cliente</th>
+                  <th>Nome</th>
+                  <th>Endereço</th>
+                  <th>Valor do Pedido</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="lista-pedidos">
+                <!-- Aqui você pode adicionar os dados dos pedidos em andamento -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer mt-5">
+    <div class="container text-center">
+      <p>© 2024 Dashboard. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
